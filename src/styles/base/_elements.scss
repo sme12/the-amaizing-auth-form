@@ -1,0 +1,56 @@
+@use '../variables' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: $colorTypography;
+    font-family: $fontFamilyPrimary;
+    text-rendering: optimizeSpeed;
+    line-height: $lineHeight;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    padding-top: calc(#{$headerHeight} + #{$spacing4});
+    padding-bottom: $spacing4;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

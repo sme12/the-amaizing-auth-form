@@ -1,0 +1,68 @@
+@use '../variables' as *;
+
+.button {
+    --font-color: #fff;
+    --font-color-active: #fff;
+    --bg-color-hover: #{$colorPrimaryDark};
+    --bg-color-active: #{$colorPrimaryDarker};
+    --bg-color-focus: #{$colorPrimaryDarker};
+    --font-size: 1rem;
+
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50px;
+    background-color: $colorPrimary;
+    box-shadow: none;
+    color: var(--font-color);
+    font-family: $fontFamilyPrimary;
+    font-size: var(--font-size);
+    line-height: 1.1;
+    cursor: pointer;
+    transition: background-color $easingDuration;
+    appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Prevent default tap higlighting on the mobile
+
+    svg {
+        margin-right: $spacing1;
+        fill: var(--font-color);
+    }
+
+    &:hover {
+        background-color: var(--bg-color-hover);
+        text-decoration: none;
+    }
+
+    &:focus {
+        background-color: var(--bg-color-focus);
+        color: var(--font-color-active);
+    }
+
+    &:active {
+        background-color: var(--bg-color-active);
+        color: var(--font-color-active);
+    }
+
+    &:disabled {
+        opacity: .5;
+        pointer-events: none;
+        cursor: auto;
+    }
+}
+
+.button--has-spinner {
+
+    &.is-pending {
+
+        > * {
+            display: none;
+        }
+
+        .spinner {
+            display: block;
+        }
+    }
+}
