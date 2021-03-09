@@ -54,8 +54,7 @@ module.exports = {
         ]
     },
     optimization: {
-        runtimeChunk: 'single',
-        moduleIds: 'hashed'
+        runtimeChunk: 'single'
     },
     plugins: [
         new CopyPlugin({
